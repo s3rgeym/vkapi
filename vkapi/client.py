@@ -1,6 +1,6 @@
 from . import defaults
 from .browser import Browser
-from .structures import AttrDict
+from .datatypes import AttrDict
 from .ui_captcha import Ui_Captcha
 from .utils import parse_hash
 from PyQt5.QtGui import QImage, QPixmap
