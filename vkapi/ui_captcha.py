@@ -1,0 +1,97 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'vkapi\captcha.ui'
+#
+# Created by: PyQt5 UI code generator 5.4.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Captcha(object):
+    def setupUi(self, Captcha):
+        Captcha.setObjectName("Captcha")
+        Captcha.resize(240, 160)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(Captcha.sizePolicy().hasHeightForWidth())
+        Captcha.setSizePolicy(sizePolicy)
+        Captcha.setMinimumSize(QtCore.QSize(240, 160))
+        Captcha.setMaximumSize(QtCore.QSize(240, 160))
+        Captcha.setSizeGripEnabled(False)
+        Captcha.setModal(True)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Captcha)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.verticalLayout_1 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_1.setObjectName("verticalLayout_1")
+        self.captcha_image = QtWidgets.QLabel(Captcha)
+        self.captcha_image.setMinimumSize(QtCore.QSize(130, 50))
+        self.captcha_image.setMaximumSize(QtCore.QSize(130, 50))
+        self.captcha_image.setText("")
+        self.captcha_image.setPixmap(QtGui.QPixmap(":/images/assets/captcha-example.jpg"))
+        self.captcha_image.setAlignment(QtCore.Qt.AlignCenter)
+        self.captcha_image.setObjectName("captcha_image")
+        self.verticalLayout_1.addWidget(self.captcha_image)
+        self.horizontalLayout_1 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_1.setObjectName("horizontalLayout_1")
+        self.refresh_captcha_button = QtWidgets.QPushButton(Captcha)
+        self.refresh_captcha_button.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/images/assets/tango-icon-theme-0.8.90/22x22/actions/view-refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.refresh_captcha_button.setIcon(icon)
+        self.refresh_captcha_button.setAutoDefault(False)
+        self.refresh_captcha_button.setFlat(True)
+        self.refresh_captcha_button.setObjectName("refresh_captcha_button")
+        self.horizontalLayout_1.addWidget(self.refresh_captcha_button)
+        self.captcha_line = QtWidgets.QLineEdit(Captcha)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.captcha_line.sizePolicy().hasHeightForWidth())
+        self.captcha_line.setSizePolicy(sizePolicy)
+        self.captcha_line.setMaximumSize(QtCore.QSize(94, 16777215))
+        self.captcha_line.setText("")
+        self.captcha_line.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.captcha_line.setObjectName("captcha_line")
+        self.horizontalLayout_1.addWidget(self.captcha_line)
+        self.verticalLayout_1.addLayout(self.horizontalLayout_1)
+        self.horizontalLayout.addLayout(self.verticalLayout_1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem2)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem3)
+        self.cancel_button = QtWidgets.QPushButton(Captcha)
+        self.cancel_button.setObjectName("cancel_button")
+        self.horizontalLayout_2.addWidget(self.cancel_button)
+        self.send_button = QtWidgets.QPushButton(Captcha)
+        self.send_button.setObjectName("send_button")
+        self.horizontalLayout_2.addWidget(self.send_button)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+
+        self.retranslateUi(Captcha)
+        self.send_button.pressed.connect(Captcha.accept)
+        self.cancel_button.pressed.connect(Captcha.reject)
+        QtCore.QMetaObject.connectSlotsByName(Captcha)
+        Captcha.setTabOrder(self.captcha_line, self.send_button)
+        Captcha.setTabOrder(self.send_button, self.cancel_button)
+        Captcha.setTabOrder(self.cancel_button, self.refresh_captcha_button)
+
+    def retranslateUi(self, Captcha):
+        _translate = QtCore.QCoreApplication.translate
+        Captcha.setWindowTitle(_translate("Captcha", "Captcha"))
+        self.refresh_captcha_button.setToolTip(_translate("Captcha", "Refresh captcha"))
+        self.captcha_line.setPlaceholderText(_translate("Captcha", "Captcha code"))
+        self.cancel_button.setText(_translate("Captcha", "Cancel"))
+        self.send_button.setText(_translate("Captcha", "Send"))
+
+from . import resources_rc
