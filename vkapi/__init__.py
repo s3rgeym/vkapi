@@ -3,5 +3,6 @@
 from . import defaults
 from . import errors
 from .auths import AuthDirect, AuthStandalone
+from .datatypes import AttrDict
 from .client import Client, ClientError, ApiError
-from .structures import AttrDict
+from .permissions import Permissions
