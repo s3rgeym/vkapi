@@ -14,8 +14,10 @@ print(
 
 # Создаем строку документации из списка аргументов
 
-s = """foo=BAR,
-bar=123"""
+s = """foo=None,
+        bar='baz',
+        quix=42
+"""
 
 print('"""Description goes here\n\n{}\n:returns:\n:rtype:\n"""'.format(
     '\n'.join([
@@ -23,3 +25,6 @@ print('"""Description goes here\n\n{}\n:returns:\n:rtype:\n"""'.format(
         for line in s.splitlines()
     ])
 ))
+
+
+print(s.replace("\t", " " * 4))

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/images">
+    <file>../assets/tango-icon-theme-0.8.90/22x22/actions/view-refresh.png</file>
+    <file>../assets/captcha-example.jpg</file>
+  </qresource>
+</RCC>
